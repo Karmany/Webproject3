@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<schema name="textdb" version="1.6">
+	<!-- defaults -->
+	<field name="_version_" type="long" indexed="false" stored="false"/>
+	<field name="_root_" type="string" indexed="true" stored="false" docValues="false" />
+
+	<!-- FIELDS -->
+
+		<!-- id -->
+	<field name="id" type="string" indexed="true" stored="true" required="true" />
+
+		<!-- metadata -->
+	<field name="title" type="title" indexed="true" stored="true" />
+	<field name="date-created" type="date" indexed="true" stored="true" />
+	<field name="page-amount" type="page" indexed="true" stored="true" />
+
+
+		<!-- text -->
+	<field name="content" type="text_no" indexed="true" stored="true" />
+
+		<!-- default -->
+	<uniqueKey>id</uniqueKey>
+
+
+
+	<!-- FIELD TYPES -->
+	<fieldType name="long" class="solr.TrieLongField" docValues="true" precisionStep="0" positionIncrementGap="0"/>
+  <fieldType name="string" class="solr.StrField" sortMissingLast="true" />
+
+	<fieldType name="title" class="solr.TextField"/>
+	<fieldType name="date" class="solr.TrieDateField"/>
+	<fieldType name="page" class="solr.TrieIntField"/>
+
+	<fieldType name="text_no" class="solr.TextField" positionIncrementGap="100">
+		<analyzer type="index">
+			<tokenizer class="solr.WhitespaceTokenizerFactory"/>
+			<filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords_en.txt"/>
+			<filter class="solr.SynonymGraphFilterFactory" synonyms="synonyms.txt"/>
+			<filter class="solr.WordDelimiterFilterFactory"
+				generateWordParts="1"
+				generateNumberParts="1"
+				splitOnCaseChange="1"
+				splitOnNumerics="1"
+				preserveOriginal="1" />
+			<filter class="solr.LowerCaseFilterFactory"/>
+			<filter class="solr.PorterStemFilterFactory"/>
+			<filter class="solr.RemoveDuplicatesTokenFilterFactory"/>
+      </analyzer>
+    </fieldType>
+
+
+	<fieldtype name="ignored" stored="false" indexed="false" multiValued="true" class="solr.StrField" />
+	<dynamicField name="ignored_*" type="ignored"/>
+
+</schema>
