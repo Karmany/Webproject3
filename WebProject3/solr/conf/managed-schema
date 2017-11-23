@@ -11,10 +11,10 @@
 	<field name="id" type="string" indexed="true" stored="true" required="true" />
 
 		<!-- metadata -->
-	<field name="Title" type="title" indexed="true" stored="true" />
-	<field name="CreationDate" type="date" indexed="true" stored="true" />
-	<field name="Author" type="author" indexed="true" stored="true" />
-	<field name="Count" type="page" indexed="true" stored="true" />
+	<field name="title" type="title" indexed="true" stored="true" />
+	<field name="category" type="category" indexed="true" stored="true" />
+	<field name="author" type="author" indexed="true" stored="true" />
+	<field name="pagecount" type="pagecount" indexed="true" stored="true" />
 
 
 		<!-- text -->
@@ -30,9 +30,9 @@
   <fieldType name="string" class="solr.StrField" sortMissingLast="true" />
 
 	<fieldType name="title" class="solr.TextField"/>
-	<fieldType name="date" class="solr.TrieDateField"/>
+	<fieldType name="category" class="solr.TrieDateField"/>
 	<fieldType name="author" class="solr.TextField"/>
-	<fieldType name="page" class="solr.TrieIntField"/>
+	<fieldType name="pagecount" class="solr.TrieIntField"/>
 
 	<fieldType name="text_no" class="solr.TextField" positionIncrementGap="100">
 		<analyzer type="index">
