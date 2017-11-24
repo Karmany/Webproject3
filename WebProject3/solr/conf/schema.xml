@@ -13,8 +13,8 @@
 		<!-- metadata -->
 	<field name="title" type="title" indexed="true" stored="true" />
 	<field name="keywords" type="keywords" indexed="true" stored="true" />
-	<field name="count" type="count" indexed="true" stored="true" />
-	<field name="creationdate" type="creationdate" indexed="true" stored="true" />
+	<field name="pagecount" type="pagecount" indexed="true" stored="true" />
+	<field name="createdate" type="createdate" indexed="true" stored="true" />
 
 
 		<!-- text -->
@@ -31,8 +31,8 @@
 
 	<fieldType name="title" class="solr.TextField"/>
 	<fieldType name="keywords" class="solr.TextField"/>
-	<fieldType name="count" class="solr.TrieIntField"/>
-	<fieldType name="creationdate" class="solr.TrieDateField"/>
+	<fieldType name="pagecount" class="solr.TrieIntField"/>
+	<fieldType name="createdate" class="solr.TrieDateField"/>
 
 	<fieldType name="text_no" class="solr.TextField" positionIncrementGap="100">
 		<analyzer type="index">
