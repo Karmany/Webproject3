@@ -15,18 +15,13 @@
 	<field name="keywords" type="keywords" indexed="true" stored="true" />
 	<field name="modified" type="modified" indexed="true" stored="true" />
 	<field name="created" type="created" indexed="true" stored="true" />
-
-
-
-
+	<field name="subject" type="subject" indexed="true" stored="true" />
 
 		<!-- text -->
 	<field name="content" type="text_no" indexed="true" stored="true" />
 
 		<!-- default -->
 	<uniqueKey>id</uniqueKey>
-
-
 
 	<!-- FIELD TYPES -->
 	<fieldType name="long" class="solr.TrieLongField" docValues="true" precisionStep="0" positionIncrementGap="0"/>
@@ -36,7 +31,7 @@
 	<fieldType name="keywords" class="solr.TextField"/>
 	<fieldType name="modified" class="solr.TrieDateField"/>
 	<fieldType name="created" class="solr.TrieDateField"/>
-
+	<fieldType name="subject" class="solr.TextField"/>
 
 
 	<fieldType name="text_no" class="solr.TextField" positionIncrementGap="100">
