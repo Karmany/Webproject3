@@ -13,8 +13,15 @@
 		<!-- metadata -->
 	<field name="title" type="title" indexed="true" stored="true" />
 	<field name="keywords" type="keywords" indexed="true" stored="true" />
-	<field name="pagecount" type="pagecount" indexed="true" stored="true" />
-	<field name="createdate" type="createdate" indexed="true" stored="true" />
+	<field name="last-modified" type="last-modified" indexed="true" stored="true" />
+	<field name="modified" type="modified" indexed="true" stored="true" />
+	<field name="created" type="created" indexed="true" stored="true" />
+	<field name="meta:save-date" type="meta:save-date" indexed="true" stored="true" />
+	<field name="date" type="date" indexed="true" stored="true" />
+	<field name="creation-date" type="creation-date" indexed="true" stored="true" />
+	<field name="last-save-date" type="last-save-date" indexed="true" stored="true" />
+
+
 
 
 		<!-- text -->
@@ -31,8 +38,14 @@
 
 	<fieldType name="title" class="solr.TextField"/>
 	<fieldType name="keywords" class="solr.TextField"/>
-	<fieldType name="pagecount" class="solr.TrieIntField"/>
-	<fieldType name="createdate" class="solr.TrieDateField"/>
+	<fieldType name="last-modified" class="solr.TrieDateField"/>
+	<fieldType name="modified" class="solr.TrieDateField"/>
+	<fieldType name="created" class="solr.DateField"/>
+	<fieldType name="meta:save-date" class="solr.DateField"/>
+	<fieldType name="date" class="solr.TrieDateField"/>
+	<fieldType name="creation-date" class="solr.TrieDateField"/>
+	<fieldType name="last-save-date" class="solr.TrieDateField"/>
+
 
 	<fieldType name="text_no" class="solr.TextField" positionIncrementGap="100">
 		<analyzer type="index">
