@@ -39,7 +39,7 @@
 	<fieldType name="keywords" class="solr.TextField"/>
 	<fieldType name="last-modified" class="solr.TrieDateField"/>
 	<fieldType name="modified" class="solr.TrieDateField"/>
-	<fieldType name="created" class="solr.DateField"/>
+	<fieldType name="created" class="solr.TrieDateField"/>
 	<fieldType name="date" class="solr.TrieDateField"/>
 	<fieldType name="creation-date" class="solr.TrieDateField"/>
 	<fieldType name="last-save-date" class="solr.TrieDateField"/>
