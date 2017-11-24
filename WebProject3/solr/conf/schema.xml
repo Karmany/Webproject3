@@ -11,10 +11,10 @@
 	<field name="id" type="string" indexed="true" stored="true" required="true" />
 
 		<!-- metadata -->
-	<field name="Title" type="title" indexed="true" stored="true" />
-	<field name="Keywords" type="Keywords" indexed="true" stored="true" />
-	<field name="Count" type="Count" indexed="true" stored="true" />
-	<field name="CreationDate" type="CreationDate" indexed="true" stored="true" />
+	<field name="title" type="title" indexed="true" stored="true" />
+	<field name="keywords" type="keywords" indexed="true" stored="true" />
+	<field name="count" type="count" indexed="true" stored="true" />
+	<field name="creationdate" type="creationdate" indexed="true" stored="true" />
 
 
 		<!-- text -->
@@ -30,9 +30,9 @@
   <fieldType name="string" class="solr.StrField" sortMissingLast="true" />
 
 	<fieldType name="title" class="solr.TextField"/>
-	<fieldType name="Keywords" class="solr.TextField"/>
-	<fieldType name="Count" class="solr.TrieIntField"/>
-	<fieldType name="CreationDate" class="solr.TrieDateField"/>
+	<fieldType name="keywords" class="solr.TextField"/>
+	<fieldType name="count" class="solr.TrieIntField"/>
+	<fieldType name="creationdate" class="solr.TrieDateField"/>
 
 	<fieldType name="text_no" class="solr.TextField" positionIncrementGap="100">
 		<analyzer type="index">
