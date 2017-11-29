@@ -15,7 +15,7 @@ $("#searchForm").submit(function(e) {
   }
   console.log(queryString);
   $.ajax({
-    url: 'http://localhost:8983/solr/web3/select/', //FIX
+    url: 'http://130.211.71.115/solr/ptil9/select/', //FIX
     data: {
       'wt' : 'json',
       'q' : queryString,
