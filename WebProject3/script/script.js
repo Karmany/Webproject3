@@ -68,7 +68,6 @@ $("#searchForm").submit(function(e) {
         */
         var numFound = 0;
         $.each(data.highlighting, function(key, value) { // For each metadata
-          key = key.split("/").pop(); // Extract last part of string -> filename
           $('.results').append('<p>' + key + '</p><ul></ul>');
           console.log(numFound);
           var numOfHighlights = value.content.length;
