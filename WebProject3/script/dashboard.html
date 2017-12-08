@@ -6,11 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Webprosjekt 3</title>
   <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
   <div class="login_modal">
-    <a href="index.html" class="home_nav active">Home</a>
-    <button type="button" id="input_toggle" href="dashboard.html">Admin login</button>
+    <a href="index.html" class="home_nav">Home</a>
+    <button type="button" id="input_toggle">Admin login</button>
     <div class="modal_container">
       <form id="admin_form">
         <p>Admin login</p>
@@ -20,14 +21,26 @@
       </form>
     </div>
   </div>
-  <form id="searchForm">
-    <input type="search" name="searchfield" id="searchField" \> <!-- type=search -->
-    <button type="submit">Search</button>
-  </form>
-  <div class="results">
-    <p class="found_results"></p>
-    <div class="items"></div>
-    <form class="keyword_toggle"></form>
+
+  <div class="overview">
+    <h1>Edit document</h1>
+    <form id="updatedoc_form">
+      <label for="doc_titles">Select document</label>
+      <select name="doc_titles" id="doc_titles">
+        <option value="" selected disabled hidden></option>
+      </select>
+      <a href="" target="_blank"></a>
+      <div class="container hidden">
+        <label for="doc_title">Title</label>
+        <input type="text" name="doc_title" id ="doc_title">
+        <label for="keyword_list">Category</label>
+        <input list="doc_keyword" name="doc_keyword" id="keyword_list">
+        <datalist id="doc_keyword"></datalist>
+        <button type="submit">Commit changes</button>
+      </div>
+      <div class="response">
+      </div>
+    </form>
   </div>
 
 
